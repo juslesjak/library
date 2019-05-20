@@ -24,6 +24,8 @@ namespace Library.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Avtor");
+
                     b.Property<string>("ISBN")
                         .IsRequired();
 

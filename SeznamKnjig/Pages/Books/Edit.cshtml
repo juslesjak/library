@@ -27,7 +27,7 @@ else
 
     <div class="form-group">
         <label asp-for="Book.ISBN"></label>
-        <input asp-for="Book.ISBN" class="form-control" />
+        <input asp-for="Book.ISBN" class="form-control" placeholder="Npr. 978-1-7848-7296-0" />
         <span class="text-danger" asp-validation-for="Book.ISBN"></span>
     </div>
     <div class="form-group">
@@ -39,6 +39,12 @@ else
         <label asp-for="Book.Opis"></label>
         <input asp-for="Book.Opis" class="form-control" />
         <span class="text-danger" asp-validation-for="Book.Opis"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Book.Avtor"></label>
+        <input asp-for="Book.Avtor" class="form-control" />
+        <span class="text-danger" asp-validation-for="Book.Avtor"></span>
 
     </div>
     <div class="form-group">

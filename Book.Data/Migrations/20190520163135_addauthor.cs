@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Library.Data.Migrations
 {
-    public partial class initialcreate : Migration
+    public partial class addauthor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -16,6 +16,7 @@ namespace Library.Data.Migrations
                     ISBN = table.Column<string>(nullable: false),
                     Naslov = table.Column<string>(nullable: false),
                     Opis = table.Column<string>(nullable: true),
+                    Avtor = table.Column<string>(nullable: true),
                     Oznaka = table.Column<string>(nullable: true),
                     Izdajatelj = table.Column<string>(nullable: true),
                     LetoIzdaje = table.Column<int>(nullable: false)

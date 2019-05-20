@@ -9,6 +9,8 @@
 #nullable enable
         public string? Opis { get; set; }
 #nullable enable
+        public string? Avtor { get; set; }
+#nullable enable
         public string? Oznaka { get; set; }
 #nullable enable
         public string? Izdajatelj { get; set; }

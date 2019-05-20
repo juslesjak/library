@@ -29,6 +29,7 @@ namespace SeznamKnjig.Pages.Books
             SearchModel.ISBN = SearchTerm;
             SearchModel.Naslov = SearchTerm;
             SearchModel.Opis = SearchTerm;
+            SearchModel.Avtor = SearchTerm;
             SearchModel.Oznaka = SearchTerm;
             SearchModel.Izdajatelj = SearchTerm;
             SearchModel.LetoIzdaje = SearchTerm;

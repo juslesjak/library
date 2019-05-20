@@ -11,9 +11,7 @@ namespace Library.Data
 
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options)
             : base(options)
-        {
-
-        }
+        { }
         public DbSet<Book> Books { get; set; }
     }
 }

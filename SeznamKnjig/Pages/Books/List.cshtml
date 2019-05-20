@@ -13,7 +13,7 @@
     <div class="form-group">
         <div class="input-group">
             <input type="search" class="form-control"
-                   asp-for="SearchTerm" />
+                   asp-for="SearchTerm" placeholder="Išči glede na ISBN, naslov, opis, avtorja, oznako, izdajatelja..."/>
             <span class="input-group-btn">
                 <button class="btn btn-default">
                     <i class="glyphicon glyphicon-search"></i>
@@ -29,6 +29,7 @@
         <th>ISBN</th>
         <th>Naslov</th>
         <th>Opis</th>
+        <th>Avtor</th>
         <th>Oznaka</th>
         <th>Založba</th>
         <th>Leto Izdaje</th>
@@ -36,33 +37,33 @@
 
     @foreach (var book in Model.Books)
     {
-        <tr>
-            <td>
-                <a class="btn btn-lg"
-                   asp-page="./Detail"
-                   asp-route-bookId="@book.Id">
-                    @book.ISBN
-                </a>
-            </td>
-            <td>@book.Naslov</td>
-            <td>@book.Opis</td>
-            <td>@book.Oznaka</td>
-            <td>@book.Izdajatelj</td>
-            <td>@book.LetoIzdaje</td>
-            <td>
-            <td>
-                <a class="btn btn-lg"
-                   asp-page="./Edit"
-                   asp-route-bookId="@book.Id">
-                    Uredi<i class="glyphicon glyphicon-edit" style="padding-left:2rem"></i>
-                </a>
-                <a class="btn btn-lg"
-                   asp-page="./Delete"
-                   asp-route-bookId="@book.Id">
-                    Izbriši<i class="glyphicon glyphicon-trash" style="padding-left:2rem"></i>
-                </a>
-            </td>
-        </tr>
+<tr>
+    <td>
+        <a class="btn"
+           asp-page="./Detail"
+           asp-route-bookId="@book.Id">
+            @book.ISBN
+        </a>
+    </td>
+    <td>@book.Naslov</td>
+    <td>@book.Opis</td>
+    <td>@book.Avtor</td>
+    <td>@book.Oznaka</td>
+    <td>@book.Izdajatelj</td>
+    <td>@book.LetoIzdaje</td>
+    <td>
+        <a class="btn"
+           asp-page="./Edit"
+           asp-route-bookId="@book.Id">
+            Uredi<i class="glyphicon glyphicon-edit" style="padding-left:2rem"></i>
+        </a>
+        <a class="btn"
+           asp-page="./Delete"
+           asp-route-bookId="@book.Id">
+            Izbriši<i class="glyphicon glyphicon-trash" style="padding-left:2rem"></i>
+        </a>
+    </td>
+</tr>
     }
 </table>
 

@@ -11,7 +11,7 @@
 }
 
 
-<h2 style="padding-top:2rem">@Model.Book.Naslov</h2>
+<h2 style="padding-top:2rem">@Model.Book.Naslov (@Model.Book.LetoIzdaje)</h2>
 
 <div>
     ISBN: @Model.Book.ISBN
@@ -21,6 +21,9 @@
 </div>
 <div>
     Opis: @Model.Book.Opis
+</div>
+<div>
+    Opis: @Model.Book.Avtor
 </div>
 <div>
     Oznaka: @Model.Book.Oznaka

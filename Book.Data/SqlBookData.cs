@@ -82,6 +82,17 @@ namespace Library.Data
                     }
                 }
 
+                if (!string.IsNullOrEmpty(searchModel.Avtor))
+                {
+                    var newquery = from b in db.Books
+                                   where b.Avtor.StartsWith(searchModel.Avtor)
+                                   select b;
+                    if (newquery != null)
+                    {
+                        result = result.Union(newquery);
+                    }
+                }
+
                 if (!string.IsNullOrEmpty(searchModel.Oznaka)) {
                     var newquery = from b in db.Books
                             where b.Oznaka.StartsWith(searchModel.Oznaka)
