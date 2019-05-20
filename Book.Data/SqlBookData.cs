@@ -103,6 +103,27 @@ namespace Library.Data
                         result = result.Union(newquery);
                     }
                 }
+
+                if (!string.IsNullOrEmpty(searchModel.LetoIzdaje))
+                {
+                    try
+                    {
+                        var searchInt = Int32.Parse(searchModel.LetoIzdaje);
+                        var newquery = from b in db.Books
+                                       where b.LetoIzdaje == searchInt
+                                       select b;
+
+                        if (newquery != null)
+                        {
+                            result = result.Union(newquery);
+                        }
+
+                    } catch(FormatException)
+                    {
+                        Console.WriteLine("Wrong form of string to int");
+                    }
+                    
+                }
             };
 
             var orderedResult = from b in result

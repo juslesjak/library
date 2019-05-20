@@ -31,7 +31,7 @@ namespace SeznamKnjig.Pages.Books
             SearchModel.Opis = SearchTerm;
             SearchModel.Oznaka = SearchTerm;
             SearchModel.Izdajatelj = SearchTerm;
-            // SearchModel.LetoIzdaje = SearchTerm2;
+            SearchModel.LetoIzdaje = SearchTerm;
             Console.WriteLine("SEARCHMODEL " + SearchModel.Naslov);
 
             Books = bookData.GetBook(SearchModel);
