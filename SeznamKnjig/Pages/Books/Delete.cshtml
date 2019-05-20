@@ -1,0 +1,15 @@
+﻿@page "{bookId}"
+@model Library.Pages.Books.DeleteModel
+@{
+
+}
+
+    <h2>Izbriši:</h2>
+    <div class="alert alert-danger">
+        Ali ste prepričani, da želite izbrisati @Model.Book.Naslov  (@Model.Book.LetoIzdaje);
+    </div>
+    <form method="post">
+        <button type="submit" class="btn btn-danger">Da</button>
+        <a asp-page="List" class="btn btn-default">Prekliči</a>
+    </form>
+

@@ -1,0 +1,45 @@
+﻿@page "{bookId:int}"
+
+@model Library.Pages.Books.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+@if (Model.Message != null)
+{
+    <div class="alert alert-info" style="margin-top:5rem">@Model.Message</div>
+}
+
+
+<h2 style="padding-top:2rem">@Model.Book.Naslov</h2>
+
+<div>
+    ISBN: @Model.Book.ISBN
+</div>
+<div>
+    Naslov: @Model.Book.Naslov
+</div>
+<div>
+    Opis: @Model.Book.Opis
+</div>
+<div>
+    Oznaka: @Model.Book.Oznaka
+</div>
+<div>
+    Izdajatelj: @Model.Book.Izdajatelj
+</div>
+<div>
+    Leto izdaje: @Model.Book.LetoIzdaje
+</div>
+
+<a asp-page="./List" class="btn btn-primary">Nazaj v knjižnjico</a>
+<a class="btn btn-default"
+   asp-page="./Edit"
+   asp-route-bookId="@Model.Book.Id">
+    Uredi
+</a>
+<a class="btn btn-default"
+   asp-page="./Delete"
+   asp-route-bookId="@Model.Book.Id">
+    Izbriši
+</a>
