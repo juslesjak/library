@@ -37,33 +37,35 @@
 
     @foreach (var book in Model.Books)
     {
-<tr>
-    <td>
-        <a class="btn"
-           asp-page="./Detail"
-           asp-route-bookId="@book.Id">
-            @book.ISBN
-        </a>
-    </td>
-    <td>@book.Naslov</td>
-    <td>@book.Opis</td>
-    <td>@book.Avtor</td>
-    <td>@book.Oznaka</td>
-    <td>@book.Izdajatelj</td>
-    <td>@book.LetoIzdaje</td>
-    <td>
-        <a class="btn"
-           asp-page="./Edit"
-           asp-route-bookId="@book.Id">
-            Uredi<i class="glyphicon glyphicon-edit" style="padding-left:2rem"></i>
-        </a>
-        <a class="btn"
-           asp-page="./Delete"
-           asp-route-bookId="@book.Id">
-            Izbriši<i class="glyphicon glyphicon-trash" style="padding-left:2rem"></i>
-        </a>
-    </td>
-</tr>
+        <tr>
+            <td>
+                <a class="btn"
+                   asp-page="./Detail"
+                   asp-route-bookId="@book.Id">
+                    @book.ISBN
+                </a>
+            </td>
+            <td>@book.Naslov</td>
+            <td>@book.Opis</td>
+            <td>@book.Avtor</td>
+            <td>@book.Oznaka</td>
+            <td>@book.Izdajatelj</td>
+            <td>@book.LetoIzdaje</td>
+            <td>
+                <a class="btn"
+                   asp-page="./Edit"
+                   asp-route-bookId="@book.Id">
+                    Uredi
+                    <i class="glyphicon glyphicon-edit" style="padding-left:2rem"></i>
+                </a>
+                <a class="btn"
+                   asp-page="./Delete"
+                   asp-route-bookId="@book.Id">
+                    Izbriši
+                    <i class="glyphicon glyphicon-trash" style="padding-left:2rem"></i>
+                </a>
+            </td>
+        </tr>
     }
 </table>
 

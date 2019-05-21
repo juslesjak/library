@@ -36,17 +36,9 @@ namespace Library.Data
 
         public IEnumerable<Book> GetBook(BookSearchModel searchModel)
         {
-            var query = from b in db.Books
-                    orderby b.Naslov
-                    select b;
-
+            // Initialize new query from DB
             var result = from b in db.Books
                          select b;
-
-            var results3 =
-                query
-                    .Concat(Enumerable.Repeat(new Book { ISBN = "eafaef", Naslov = "Juš Lesjak Autobiogaphy" }, 1))
-                    .OrderBy(b => b.Naslov);
 
             if (searchModel != null)
             {
@@ -55,7 +47,7 @@ namespace Library.Data
                                    where b.ISBN.StartsWith(searchModel.ISBN)
                                    select b;
 
-                    // Either find one and set it as result
+                    // Either find items and set them as result
                     // Or find none and empty the result query
                     result = newquery;
                 }
@@ -133,7 +125,6 @@ namespace Library.Data
                     {
                         Console.WriteLine("Wrong form of string to int");
                     }
-                    
                 }
             };
 
@@ -142,15 +133,6 @@ namespace Library.Data
                                 select b;
 
             return orderedResult;
-        }
-
-        public IEnumerable<Book> GetBookByTitle(string name)
-        {
-            var query = from b in db.Books
-                        where b.Naslov.StartsWith(name) || string.IsNullOrEmpty(name)
-                        orderby b.Naslov
-                        select b;
-            return query;
         }
 
         public Book GetById(int id)

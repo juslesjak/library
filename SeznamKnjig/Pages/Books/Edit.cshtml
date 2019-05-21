@@ -20,7 +20,6 @@ else
     </div>
 }
 
-
 <form method="post">
 
     <input type="hidden" asp-for="Book.Id" />
@@ -66,14 +65,12 @@ else
 
     </div>
     <button type="submit" class="btn btn-primary" style="float:left">Shrani</button>
-    @if (Model.Book.Id != 0)
+    @if (Model.Book.Id != 0) // If editing existing Book, return to Detail page of that book
     {
         <a asp-page="./Detail" asp-route-bookId="@Model.Book.Id" class="btn btn-primary" style="float:left;margin-left:2rem">Prekliči</a>
-
     }
-    else
+    else // If adding new Book, return to List page
     {
         <a asp-page="./List" class="btn btn-primary" style="float:left;margin-left:2rem">Prekliči</a>
-
     }
 </form>

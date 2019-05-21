@@ -8,8 +8,6 @@ namespace Library.Data
     public interface IBookData
     {
         IEnumerable<Book> GetBook(BookSearchModel searchModel);
-        IEnumerable<Book> GetBookByTitle(string name);
-
         Book GetById(int id);
         Book Update(Book updatedBook);
         Book Add(Book newBook);

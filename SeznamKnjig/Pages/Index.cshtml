@@ -5,74 +5,72 @@
 }
 
     <html style="overflow:auto">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Moja Knjižnica</title>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Moja Knjižnica</title>
 
-        <environment include="Development">
-            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-            <link rel="stylesheet" href="~/css/site.css" />
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        </environment>
-        <environment exclude="Development">
-            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        </environment>
-    </head>
-    <body style="min-height:100%;background-size:cover;background-image:url(images/j-zamora-267753-unsplash.jpg);overflow:auto">
-        <!--- Start Home Section -->
-        <!--- Start Landing Page Section -->
+            <environment include="Development">
+                <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+                <link rel="stylesheet" href="~/css/site.css" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+            </environment>
+            <environment exclude="Development">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+                      asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                      asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+                <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+                <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+            </environment>
+        </head>
+        <body style="min-height:100%;background-size:cover;background-image:url(images/j-zamora-267753-unsplash.jpg);overflow:auto">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="col-xs-12 col-md-12 col-lg-12" style="margin:20vw;margin-top:35vw">
-                        <a asp-page="./Books/List" class="btn btn-success" style="float:left;margin-left:2rem">
-                            <p style="
-                        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        font-size: 4vw;
-                        color: white;
-                        font-weight: 200;
-                        margin:15px;">
-                                VSTOPI V KNJIŽNICO
-                            </p>
-                        </a>
+            <!--- Start Landing Page Section -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-xs-12 col-md-12 col-lg-12" style="margin:20vw;margin-top:30vw">
+                            <a asp-page="./Books/List" class="btn btn-success" style="float:left;margin-left:2rem">
+                                <p style="
+                            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            font-size: 4vw;
+                            color: white;
+                            font-weight: 200;
+                            margin:15px;">
+                                    VSTOPI V KNJIŽNICO
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         
-        <!--- End Landing Page Section-->
-        <!--- End Home Section -->
+            <!--- End Landing Page Section-->
 
-        <environment include="Development">
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
-            <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+            <environment include="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+                <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
 
-        </environment>
-        <environment exclude="Development">
-            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery"
-                    crossorigin="anonymous"
-                    integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                    crossorigin="anonymous"
-                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
-            </script>
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
-            <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-
-        </environment>
-    </body>
+            </environment>
+            <environment exclude="Development">
+                <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                        asp-fallback-test="window.jQuery"
+                        crossorigin="anonymous"
+                        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+                </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                        crossorigin="anonymous"
+                        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+                </script>
+                <script src="~/js/site.min.js" asp-append-version="true"></script>
+                <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+            </environment>
+        </body>
     </html>
